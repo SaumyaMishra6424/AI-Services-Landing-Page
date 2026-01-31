@@ -19,7 +19,7 @@ export default function Navbar() {
     { name: "Services", href: "#Services" },
     { name: "Why Us", href: "#WhyUs" },
     { name: "Testimonials", href: "#Testimonials" },
-    { name: "Pricing", href: "#pricing" }, // Matches the Pricing ID
+    { name: "Pricing", href: "#Pricing" }, 
   ];
 
   return (
@@ -28,9 +28,11 @@ export default function Navbar() {
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         
-        {/* Logo and Brand Name - Properly Grouped */}
+        {/* Logo and Brand Name */}
         <div className="flex items-center gap-3">
-          <img src="/logo.png" alt="Logo" className="w-9 h-9 object-contain" />
+        
+            <img src="/logo.png" alt="L" className="w-6 h-6 object-contain invert" />
+         
           <span className="text-xl font-bold text-white tracking-tighter">
             Matrix AI
           </span>
@@ -48,7 +50,7 @@ export default function Navbar() {
             </a>
           ))}
           <a 
-            href="#contact" 
+            href="#Contact" 
             className="bg-violet-600 hover:bg-violet-500 px-6 py-2.5 rounded-full text-sm font-bold text-white transition-all shadow-lg shadow-violet-900/20 active:scale-95"
           >
             Get Started
@@ -56,14 +58,14 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle Button */}
-        <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+        <button className="md:hidden text-white outline-none" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Menu Slide-out */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-[#020617] border-b border-white/10 p-6 flex flex-col gap-6 shadow-2xl">
+        <div className="md:hidden absolute top-full left-0 w-full bg-[#020617] border-b border-white/10 p-6 flex flex-col gap-6 shadow-2xl animate-in fade-in slide-in-from-top-4">
           {navLinks.map((link) => (
             <a 
               key={link.name}
@@ -75,9 +77,9 @@ export default function Navbar() {
             </a>
           ))}
           <a 
-            href="#contact" 
+            href="#Contact" 
             onClick={() => setIsOpen(false)} 
-            className="bg-violet-600 text-center text-white py-4 rounded-xl font-bold shadow-lg"
+            className="bg-violet-600 text-center text-white py-4 rounded-xl font-bold shadow-lg shadow-violet-900/20"
           >
             Get Started
           </a>

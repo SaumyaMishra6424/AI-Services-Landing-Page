@@ -21,14 +21,15 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              {/* Ensure logo.png is in your public folder */}
-              <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
+              <div className="bg-black-600 p-1.5 rounded-lg">
+                <img src="/logo.png" alt="L" className="w-6 h-6 object-contain invert" />
+              </div>
               <span className="text-xl font-bold text-white tracking-tighter">
-                AI Consulting
+                Matrix AI
               </span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Empowering businesses through cutting-edge AI consulting and high-speed development.
+              Empowering businesses through cutting-edge AI consulting and high-speed neural development.
             </p>
           </div>
 
@@ -66,18 +67,19 @@ export default function Footer() {
           <div className="md:col-span-1 flex flex-col items-center md:items-end justify-center">
             <button 
               onClick={scrollToTop}
+              aria-label="Back to top"
               className="group p-4 rounded-2xl bg-violet-600/10 border border-violet-500/20 hover:bg-violet-600 transition-all shadow-lg"
             >
               <ChevronUp className="text-violet-500 group-hover:text-white transition-colors" size={24} />
             </button>
-            <span className="text-slate-500 text-[10px] mt-2 uppercase tracking-widest">Back to Top</span>
+            <span className="text-slate-500 text-[10px] mt-2 uppercase tracking-widest">System Reset</span>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/5 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-xs">
-            © 2026 AI Consulting Business. All rights reserved.
+            © 2026 Matrix AI Consulting. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-slate-500">
             <a href="#" className="hover:text-white transition">Privacy Policy</a>
