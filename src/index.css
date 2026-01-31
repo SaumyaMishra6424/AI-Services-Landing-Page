@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[#020617] overflow-x-hidden;
+  background: radial-gradient(circle at 50% -20%, #1e1b4b 0%, #020617 80%);
+}
+
+.glass-card {
+  @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.05] shadow-2xl;
+}
+
+.purple-glow {
+  box-shadow: 0 0 40px -10px rgba(139, 92, 246, 0.3);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  /* This prevents the fixed navbar from covering the section heading */
+  scroll-margin-top: 100px;
+}
+
+/* Custom Scrollbar for Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e1b4b;
+  border-radius: 10px;
+  border: 2px solid #020617;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
